@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let users = [
+      { "name": "Leanne Graham", "username": "Bret", "email": "Sincere@april.biz" },
+      { "name": "Ervin Howell", "username": "Antonette", "email": "Shanna@melissa.tv" },
+      { "name": "Clementine Bauch", "username": "Samantha", "email": "Nathan@yesenia.net" },
+      {  "name": "Patricia Lebsack", "username": "Karianne", "email": "Julianne.OConner@kory.org" },
+      {  "name": "Chelsey Dietrich", "username": "Kamren", "email": "Lucio_Hettinger@annie.ca" }
+    ];
+// users.forEach(function (value, index, arr){
+//     console.log(value);
+// })
+//
+//     users.forEach(value => console.log(value.name));
+//
+// let filterUs = users.filter(function (value){
+//     return value.id>3;
+// })
+//     console.log(filterUs);
+//
+// let filterUs2 = users.filter(value => value.id>3);
+// console.log(filterUs2);
+
+// let maparr =users.map(function (value, index) {
+//     return {
+//         "id": index+1,
+//         "name": value.name,
+//         "email": value.email,
+//         "password": value.password,
+//         "username": value.username,
+//     }
+// })
+
+    // let maparr =users.map(function (value, index) {
+    //     return {...value, id: index+1};
+    //
+    // })
+
+    let maparr =users.map((value, index) => {
+        return  {id:index+1, name: value.name}
+    })
+
+    console.log(maparr);
+
+
+let m = users.find(value => {return value.username === "Karianne"});
+console.log(m);
+
+</script>
+</body>
+</html>
