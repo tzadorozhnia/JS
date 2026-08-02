@@ -8,6 +8,20 @@
 
 
 function CopyObject(value) {
+    if (value === undefined){
+        return undefined
+    }
+    if (value === null){
+        return null
+    }
+    if (Number.isNaN(value)) {
+        return NaN;
+    }
+
+    if (typeof value !== 'object') {
+        return value;
+    }
+
     let strObf = JSON.stringify(value);
     let newObj = JSON.parse(strObf);
 
@@ -38,6 +52,6 @@ obj = {
     }
 }
 
-copy = new CopyObject(obj);
+copy = CopyObject(undefined);
 console.log(copy);
-copy.foo()
+copy?.foo()
