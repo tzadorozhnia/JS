@@ -52,6 +52,6 @@ obj = {
     }
 }
 
-copy = CopyObject(undefined);
+copy = CopyObject(obj);
 console.log(copy);
 copy?.foo()
